@@ -55,7 +55,7 @@ const config: Config = {
 				sm: "calc(var(--radius) - 4px)"
 			},
 			fontFamily: {
-				sans: ["Fira Sans", ...fontFamily.sans]
+				sans: ["Overpass Variable", ...fontFamily.sans]
 			}
 		}
 	},

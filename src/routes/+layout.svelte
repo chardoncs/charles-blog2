@@ -1,14 +1,21 @@
 <script lang="ts">
-	import '../app.css'
-  import "@fontsource/fira-sans"
+  import '../app.css'
+  import "@fontsource-variable/overpass"
+  import "@fontsource-variable/caveat"
   import { ModeWatcher } from "mode-watcher"
+	import Navbar from '$lib/components/nav/navbar.svelte'
 
 	let { children } = $props()
 </script>
 
 <svelte:head>
-  <title>Charles</title>
+  <title>Charles Dong</title>
 </svelte:head>
 
 <ModeWatcher defaultMode="system" />
-{@render children()}
+
+<Navbar />
+
+<main class="w-full h-dvh">
+  {@render children()}
+</main>

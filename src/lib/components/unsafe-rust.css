@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .script-style {
+    font-family: "Caveat Variable", sans-serif;
+  }
+}
