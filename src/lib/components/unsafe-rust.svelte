@@ -12,7 +12,7 @@
   </div>
   <img
     src="/images/curly-arrow.svg"
-    alt="Arrow"
+    alt="Curly arrow"
     class="absolute w-20 fill-blue-600 -translate-y-24 -translate-x-8 z-[1]"
   />
   <img

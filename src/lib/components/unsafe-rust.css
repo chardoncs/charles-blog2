@@ -3,5 +3,6 @@
 @layer components {
   .script-style {
     font-family: "Caveat Variable", sans-serif;
+    color: hsl(216, 63%, 43%);
   }
 }

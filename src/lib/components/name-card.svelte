@@ -1,13 +1,15 @@
 <script lang="ts">
   import LinkList from "$lib/components/link-list.svelte";
   import { FingerprintIcon } from "lucide-svelte"
+  import { Separator } from "$lib/components/ui/separator"
 </script>
 
 <div class="place-self-center mx-auto max-w-screen-sm">
   <div class="flex flex-col gap-1">
     <h1 class="font-bold text-3xl">Charles Dong</h1>
     <p>👨 he/him</p>
-    <p>Graduate student 👨‍🎓, former (and want-to-be-again) software engineer 👨‍💻, Rustacean 🦀, computer & programming & FOSS lover 💻</p>
+    <p>Graduate student 👨‍🎓, former (and want-to-be-again) software engineer 👨‍💻, Rustacean 🦀 & newcomer Ziggy 🦎, computer & programming & FOSS lover 💻</p>
+    <Separator />
     <div class="text-sm flex gap-2 place-items-center">
       <FingerprintIcon class="size-4" />
       <span>6971 3F22 36BB D93D 3E78 EFEF 0D56 181B 4841 4DE8</span>
