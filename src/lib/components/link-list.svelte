@@ -39,6 +39,7 @@
     {
       name: "LinkedIn",
       description: "LinkedIn",
+      footnote: "LinkedIn does not permit logo usage in any way.",
       href: "https://www.linkedin.com/in/yue-dong-237026128/",
     },
   ]
@@ -46,7 +47,7 @@
 
 <div>
   <ul class="flex gap-2 place-items-center">
-    {#each links as { icon, name, description, href, onClick, styleClass, iconClass }}
+    {#each links as { icon, name, description, footnote, href, onClick, styleClass, iconClass }}
       <Tooltip>
         <TooltipTrigger asChild let:builder>
           <Button
@@ -81,6 +82,9 @@
         {#if description}
           <TooltipContent>
             <p>{description}</p>
+            {#if footnote}
+              <p class="text-xs">&gt;&nbsp;{footnote}</p>
+            {/if}
           </TooltipContent>
         {/if}
       </Tooltip>
