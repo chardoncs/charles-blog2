@@ -22,6 +22,7 @@
     "lucide-svelte": "^0.456.0",
     "mode-watcher": "^0.4.1",
     "svelte": "^5.1.15",
+    "svelte-adapter-bun": "^0.5.2",
     "svelte-check": "^4.0.7",
     "tailwind-merge": "^2.5.4",
     "tailwind-variants": "^0.2.1",
