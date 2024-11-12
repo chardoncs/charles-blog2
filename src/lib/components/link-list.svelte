@@ -11,23 +11,47 @@
       href: "https://github.com/chardoncs",
     },
     {
+      icon: "codeberg.svg",
+      description: "Codeberg: chardon_cs",
+      href: "https://codeberg.org/chardon_cs",
+    },
+    {
+      icon: "bluesky.svg",
+      description: "Bluesky: @chardoncs.dev",
+      href: "https://bsky.app/profile/chardoncs.dev",
+      styleClass: "bg-blue-600 hover:bg-blue-500 dark:hover:bg-blue-700",
+      iconClass: "invert",
+    },
+    {
+      icon: "mastodon.svg",
+      description: "Mastodon: @chardon_cs@mastodon.social",
+      href: "https://mastodon.social/@chardon_cs",
+      styleClass: "bg-purple-600 hover:bg-purple-500 dark:hover:bg-purple-700",
+      iconClass: "invert",
+    },
+    {
       icon: "twitter-brands-solid.svg",
       description: "Twitter: @chardon_cs",
       href: "https://twitter.com/chardon_cs",
       styleClass: "bg-sky-600 hover:bg-sky-500 dark:hover:bg-sky-700",
       iconClass: "invert",
     },
+    {
+      name: "LinkedIn",
+      description: "LinkedIn",
+      href: "https://www.linkedin.com/in/yue-dong-237026128/",
+    },
   ]
 </script>
 
 <div>
-  <ul class="flex gap-2">
-    {#each links as { icon, description, href, onClick, styleClass, iconClass }}
+  <ul class="flex gap-2 place-items-center">
+    {#each links as { icon, name, description, href, onClick, styleClass, iconClass }}
       <Tooltip>
         <TooltipTrigger asChild let:builder>
           <Button
             builders={[builder]}
-            size="icon"
+            size={icon ? "icon" : "sm"}
             variant="outline"
             {href}
             target="_blank"
@@ -41,13 +65,16 @@
                 src={`/images/icons/${icon}`}
                 alt={description}
                 class={cn(
-                  "size-6",
+                  "size-5",
                   styleClass || iconClass ? undefined : "dark:invert",
                   iconClass,
                 )}
               />
             {:else}
               {icon}
+            {/if}
+            {#if !icon}
+              {name ?? description}
             {/if}
           </Button>
         </TooltipTrigger>
