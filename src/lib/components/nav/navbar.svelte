@@ -1,8 +1,9 @@
 <script lang="ts">
+  import "./navbar.css"
   import type { NavItem } from "$lib/models/nav-item"
   import { cn } from "$lib/utils"
-  import { onMount } from "svelte"
   import ModeToggle from "../mode-toggle.svelte";
+  import { onMount } from "svelte"
 
   const navItems: NavItem[] = [
     {
@@ -18,10 +19,10 @@
     },
   ]
 
-  let location = $state("")
+  let path = $state("")
 
   onMount(() => {
-    location = window.location.pathname
+    path = window.location.pathname
   })
 </script>
 
@@ -35,11 +36,16 @@
   {#each navItems as { name, href, pathPattern, onClick, target } (href)}
     <a
       {href}
-      onclick={() => onClick?.call(null)}
+      onclick={() => {
+        if (href) {
+          path = href
+        }
+        onClick?.call(null)
+      }}
       {target}
       class={cn(
         "hover:underline cursor-pointer",
-        pathPattern?.test(location) ? "font-bold" : undefined,
+        pathPattern?.test(path) ? "active" : undefined,
       )}
     >
       {name}

@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  nav .active {
+    @apply font-bold;
+  }
+}

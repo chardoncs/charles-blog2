@@ -1,9 +1,10 @@
-import type { SvelteComponent } from "svelte"
+import type { Component } from "svelte"
 
 export interface LinkItem {
-  icon: SvelteComponent
+  icon: string | Component
   description?: string
   href?: string
   onClick?: () => void
   styleClass?: string
+  iconClass?: string
 }
