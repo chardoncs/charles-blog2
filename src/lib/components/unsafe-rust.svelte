@@ -1,14 +1,23 @@
 <script lang="ts">
+  import { onMount } from "svelte"
   import "./unsafe-rust.css"
+  import { ferrisQuotePool } from "$lib/quotes"
+
+  let currentQuote = $state("")
+
+  onMount(() => {
+    const randomIndex = Math.floor(Math.random() * ferrisQuotePool.length)
+    currentQuote = ferrisQuotePool[randomIndex]
+  })
 </script>
 
 <div
   class="absolute -z-[9999] bottom-0 right-0 select-none"
 >
   <div
-    class="script-style absolute -translate-y-32 -translate-x-32 text-2xl z-[2]"
+    class="script-style absolute -translate-y-32 -translate-x-40 text-2xl z-[2] text-center align-bottom min-w-60"
   >
-    Unsafe Rust be like
+    {currentQuote}
   </div>
   <img
     src="/images/curly-arrow.svg"
