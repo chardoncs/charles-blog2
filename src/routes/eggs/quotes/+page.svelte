@@ -7,7 +7,7 @@
   <h1 class="font-bold text-2xl">All possible quotes</h1>
   <Separator />
   <ul class="list-disc">
-    {#each ferrisQuotePool as quote}
+    {#each ferrisQuotePool.sort() as quote (quote)}
       <li>{quote}</li>
     {/each}
   </ul>
