@@ -14,7 +14,7 @@
     {
       name: "Deepest Secrets 🙈",
       onClick() {
-        window.open("https://archive.org/download/kikTXNL6MvX6ZpRXM/kikTXNL6MvX6ZpRXM.mp4", "_blank")
+        window.open("https://youtu.be/dQw4w9WgXcQ?si=TCt76zicD391XvgT", "_blank")
       },
     },
   ]
