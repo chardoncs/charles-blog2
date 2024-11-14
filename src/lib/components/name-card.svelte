@@ -11,7 +11,7 @@
   <div class="flex flex-col gap-1">
     <h1 class="font-bold text-3xl">Charles Dong</h1>
     <p>👨 he/him</p>
-    <p>Graduate student 👨‍🎓, former (and want-to-be-again) software engineer 👨‍💻, Rustacean 🦀 & newcomer Ziggy 🦎, computer & programming & FOSS lover 💻</p>
+    <p>Graduate student 👨‍🎓, former (and want-to-be-again) software engineer 👨‍💻, Rustacean 🦀 & newcomer Zigger 🦎, computer & programming & FOSS lover 💻</p>
     <Separator />
     <div class="text-sm flex gap-2 place-items-center">
       <a
