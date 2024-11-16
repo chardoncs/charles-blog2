@@ -70,6 +70,8 @@ jobs:
             sudo mv -f ~/charles-blog2.tar.xz .
             sudo systemctl stop charlesblog
             sudo rm -rf ./charles-blog2
-            sudo tar xpf ./charles-blog2.tar.xz
-            sudo chown -R charles-blog2:charles-blog2 ./charles-blog2
+            sudo mkdir ./charles-blog2
+            cd ./charles-blog2
+            sudo tar xpf ../charles-blog2.tar.xz
+            sudo chown -R charles-blog2:charles-blog2 .
             sudo systemctl start charlesblog
