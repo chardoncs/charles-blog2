@@ -29,7 +29,6 @@ jobs:
       - name: Tidy up
         run: |
           rm -rf ./.git
-          rm -rf ./node_modules
 
       - name: Compress artifact
         run: tar cpf ./charles-blog2.tar.xz .
