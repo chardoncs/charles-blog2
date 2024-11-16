@@ -53,7 +53,7 @@ jobs:
       - name: Send artifact to server(s)
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.IP_ADDR }}
+          host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
           source: "./charles-blog2.tar.xz"
@@ -62,7 +62,7 @@ jobs:
       - name: Deploy project on server(s)
         uses: appleboy/ssh-action@v1.1.0
         with:
-          host: ${{ secrets.IP_ADDR }}
+          host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
           script: |
