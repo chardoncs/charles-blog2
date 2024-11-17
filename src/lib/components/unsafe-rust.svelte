@@ -1,4 +1,5 @@
 <script lang="ts">
+  import "@fontsource-variable/caveat"
   import { onMount } from "svelte"
   import "./unsafe-rust.css"
   import { ferrisQuotePool } from "$lib/quotes"
