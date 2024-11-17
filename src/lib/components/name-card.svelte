@@ -7,7 +7,7 @@
   const orcid = "0009-0002-1296-4256"
 </script>
 
-<div class="place-self-center mx-auto max-w-screen-sm flex flex-col gap-2">
+<div class="place-self-center mx-4 md:mx-auto max-w-screen-sm flex flex-col gap-2">
   <div class="flex flex-col gap-1">
     <h1 class="font-bold text-3xl">Charles Dong</h1>
     <p>👨 he/him</p>
