@@ -9,6 +9,10 @@ export const ferrisQuotePool = [
   "\"You guys using Zig?\"",
   "Crablang",
   "\"All your codebase belong to us.\"",
-  "**Powered by SvelteKit & Bun**",
-  "**Arrow made with Inkscape**",
+  //"**Powered by SvelteKit & Bun**",
+  //"**Arrow made with Inkscape**",
+  "\"I use Arch btw\"",
+  "\"Neovim btw\"",
+  "clippy",
+  "oh caml my crab",
 ]
