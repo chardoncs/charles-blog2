@@ -3,8 +3,10 @@
   import UnsafeRust from "$lib/components/unsafe-rust.svelte"
 </script>
 
-<div class="flex w-full h-dvh">
-  <NameCard />
-</div>
+<div class="flex w-full h-dvh place-items-center place-content-center">
+  <div>
+    <NameCard />
+  </div>
 
-<UnsafeRust />
+  <UnsafeRust />
+</div>

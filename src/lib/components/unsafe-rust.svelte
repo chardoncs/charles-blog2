@@ -12,10 +12,10 @@
 </script>
 
 <div
-  class="absolute -z-[9999] bottom-0 right-0 select-none"
+  class="absolute -z-[1] bottom-0 right-0 select-none"
 >
   <div
-    class="script-style absolute -translate-y-32 -translate-x-40 text-2xl z-[2] text-center align-bottom min-w-60"
+    class="script-style absolute -translate-y-32 -translate-x-40 text-2xl z-[2] text-center align-bottom min-w-60 pointer-events-auto"
   >
     {currentQuote}
   </div>
