@@ -16,3 +16,8 @@ export const ferrisQuotePool = [
   "clippy",
   "oh caml my crab",
 ]
+
+export function getRandomQuote(): string {
+    const randomIndex = Math.floor(Math.random() * ferrisQuotePool.length)
+    return ferrisQuotePool[randomIndex]
+}

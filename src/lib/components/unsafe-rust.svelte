@@ -2,13 +2,12 @@
   import "@fontsource-variable/caveat"
   import { onMount } from "svelte"
   import "./unsafe-rust.css"
-  import { ferrisQuotePool } from "$lib/quotes"
+  import { getRandomQuote } from "$lib/quotes"
 
   let currentQuote = $state("")
 
   onMount(() => {
-    const randomIndex = Math.floor(Math.random() * ferrisQuotePool.length)
-    currentQuote = ferrisQuotePool[randomIndex]
+    currentQuote = getRandomQuote()
   })
 </script>
 
