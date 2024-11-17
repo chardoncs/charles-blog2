@@ -38,8 +38,6 @@
     },
     {
       name: "LinkedIn",
-      description: "LinkedIn",
-      footnote: "LinkedIn does not permit logo usage in any way.",
       href: "https://www.linkedin.com/in/yue-dong-237026128/",
     },
   ]
@@ -79,7 +77,7 @@
             {/if}
           </Button>
         </TooltipTrigger>
-        {#if description}
+        {#if description || footnote}
           <TooltipContent>
             <p>{description}</p>
             {#if footnote}
