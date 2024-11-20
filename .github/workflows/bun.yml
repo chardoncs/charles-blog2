@@ -71,9 +71,9 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             cd /opt/charles-blog2
-            sudo mv -f ~/charles-blog2.tar.xz .
+            mv -f ~/charles-blog2.tar.xz .
             sudo systemctl stop charlesblog
             sudo rm -rf ./charles-blog2
-            sudo tar xJf ./charles-blog2.tar.xz
+            tar xJf ./charles-blog2.tar.xz
             sudo chown -R charles-blog2:charles-blog2 ./charles-blog2
             sudo systemctl start charlesblog
