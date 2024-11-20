@@ -31,7 +31,7 @@ jobs:
           rm -rf ./.git
 
       - name: Compress artifact
-        run: tar cJf ./charles-blog2.tar.xz .
+        run: tar cpf ./charles-blog2.tar.xz .
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -71,6 +71,6 @@ jobs:
             sudo rm -rf ./charles-blog2
             sudo mkdir ./charles-blog2
             cd ./charles-blog2
-            sudo tar xJf ../charles-blog2.tar.xz
+            sudo tar xpf ../charles-blog2.tar.xz
             sudo chown -R charles-blog2:charles-blog2 .
             sudo systemctl start charlesblog
