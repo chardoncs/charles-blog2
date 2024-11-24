@@ -5,9 +5,6 @@
   import { SunIcon, MoonStarIcon, CheckIcon } from "lucide-svelte"
   import { cn } from "$lib/utils"
 
-  const currentMode = $derived(mode)
-  const userSelectedMode = $derived(userPrefersMode)
-
   interface Mode {
     name: string
     value: "light" | "dark" | "system"
@@ -37,9 +34,9 @@
       style="icon"
       title={`Current Mode: ${$userPrefersMode}`}
     >
-      {#if $currentMode === "light"}
+      {#if $mode === "light"}
         <SunIcon />
-      {:else if $currentMode === "dark"}
+      {:else if $mode === "dark"}
         <MoonStarIcon />
       {/if}
     </Button>
