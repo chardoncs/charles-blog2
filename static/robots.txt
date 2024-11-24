@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
 Disallow: /quotes/*
-Disallow: /images/*
-Allow: /images/og/thumbnail.svg
