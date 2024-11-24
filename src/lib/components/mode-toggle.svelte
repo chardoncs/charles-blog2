@@ -1,9 +1,32 @@
 <script lang="ts">
   import { Button } from "./ui/button";
   import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu"
-  import { userPrefersMode, resetMode, setMode } from "mode-watcher"
-  import { SunIcon, MoonStarIcon, MonitorIcon } from "lucide-svelte"
+  import { userPrefersMode, setMode, mode } from "mode-watcher"
+  import { SunIcon, MoonStarIcon, CheckIcon } from "lucide-svelte"
+  import { cn } from "$lib/utils"
 
+  const currentMode = $derived(mode)
+  const userSelectedMode = $derived(userPrefersMode)
+
+  interface Mode {
+    name: string
+    value: "light" | "dark" | "system"
+  }
+
+  const modes: Mode[] = [
+    {
+      name: "Light",
+      value: "light",
+    },
+    {
+      name: "Dark",
+      value: "dark",
+    },
+    {
+      name: "System",
+      value: "system",
+    },
+  ]
 </script>
 
 <DropdownMenu>
@@ -14,24 +37,27 @@
       style="icon"
       title={`Current Mode: ${$userPrefersMode}`}
     >
-      {#if $userPrefersMode === "light"}
+      {#if $currentMode === "light"}
         <SunIcon />
-      {:else if $userPrefersMode === "dark"}
+      {:else if $currentMode === "dark"}
         <MoonStarIcon />
-      {:else if $userPrefersMode === "system"}
-        <MonitorIcon />
       {/if}
     </Button>
     <DropdownMenuContent>
-      <DropdownMenuItem onclick={() => setMode("light")}>
-        Light
-      </DropdownMenuItem>
-      <DropdownMenuItem onclick={() => setMode("dark")}>
-        Dark
-      </DropdownMenuItem>
-      <DropdownMenuItem onclick={() => resetMode()}>
-        System
-      </DropdownMenuItem>
+      {#each modes as { name, value } (value)}
+        <DropdownMenuItem
+          class="flex place-items-center gap-1"
+          onclick={() => setMode(value)}
+        >
+          <CheckIcon
+            class={cn(
+              "size-4",
+              $userPrefersMode !== value && "text-transparent",
+            )}
+          />
+          {name}
+        </DropdownMenuItem>
+      {/each}
     </DropdownMenuContent>
   </DropdownMenuTrigger>
 </DropdownMenu>
