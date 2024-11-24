@@ -28,7 +28,7 @@
 
 <nav
   class={cn(
-    "absolute float-right top-0 right-0 pointer-events-auto flex gap-3 md:gap-6 pl-8 pr-4 py-3 rounded-2xl mx-5 my-4 place-items-center",
+    "flex-shrink-0 pointer-events-auto flex gap-3 md:gap-6 pl-8 pr-4 py-3 rounded-2xl mx-5 my-4 place-items-center",
     "backdrop-blur-lg bg-zinc-50 dark:bg-zinc-950/20",
     "border border-zinc-200 dark:border-zinc-800",
   )}

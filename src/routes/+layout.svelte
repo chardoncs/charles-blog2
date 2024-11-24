@@ -13,8 +13,12 @@
 
 <ModeWatcher defaultMode="system" />
 
-<Navbar />
+<div class="w-full h-dvh flex flex-col pointer-events-none">
+  <header class="flex-shrink-0 sticky top-0 pointer-events-none flex place-content-end z-50">
+    <Navbar />
+  </header>
 
-<main class="w-full h-dvh">
-  {@render children()}
-</main>
+  <main class="w-full pointer-events-auto">
+    {@render children()}
+  </main>
+</div>
