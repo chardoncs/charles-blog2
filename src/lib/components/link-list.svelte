@@ -12,8 +12,8 @@
     },
     {
       icon: "codeberg.svg",
-      description: "Codeberg: chardon_cs",
-      href: "https://codeberg.org/chardon_cs",
+      description: "Codeberg: chardoncs",
+      href: "https://codeberg.org/chardoncs",
     },
     {
       icon: "bluesky.svg",
