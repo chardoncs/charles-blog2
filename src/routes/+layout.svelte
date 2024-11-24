@@ -9,7 +9,11 @@
 
 <svelte:head>
   <title>Charles Dong</title>
-  <meta property="og:image" content="https://chardoncs.github.io/assets/og/thumbnail.png" />
+
+  <meta property="og:image" content="/images/og/thumbnail.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 </svelte:head>
 
 <ModeWatcher defaultMode="system" />
