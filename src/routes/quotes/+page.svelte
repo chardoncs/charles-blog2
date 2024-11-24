@@ -3,7 +3,7 @@
   import { ferrisQuotePool } from "$lib/quotes"
 </script>
 
-<div class="mx-auto max-w-screen-md flex flex-col place-content-center h-dvh">
+<div class="container flex flex-col">
   <h1 class="font-bold text-2xl">All possible quotes</h1>
   <Separator />
   <ul class="list-disc">
