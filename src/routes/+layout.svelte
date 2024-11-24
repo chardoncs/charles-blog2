@@ -9,6 +9,7 @@
 
 <svelte:head>
   <title>Charles Dong</title>
+  <meta property="og:image" content="/images/og/thumbnail.svg" />
 </svelte:head>
 
 <ModeWatcher defaultMode="system" />
