@@ -10,14 +10,17 @@
 <svelte:head>
   <title>Charles Dong</title>
 
-  <meta property="description" content="Charles' personal website" />
+  <meta name="description" content="Charles' personal website" />
 
   <meta property="og:title" content="Charles Dong" />
   <meta property="og:description" content="Charles' personal website" />
   <meta property="og:image" content="https://chardoncs.dev/images/og/thumbnail.png" />
   <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Charles Dong" />
+  <meta name="twitter:description" content="Charles' personal website" />
+  <meta name="twitter:image" content="https://chardoncs.dev/images/og/thumbnail.png" />
 </svelte:head>
 
 <ModeWatcher defaultMode="system" />
