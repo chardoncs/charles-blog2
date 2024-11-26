@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .jaguar-parody {
+    font-family: 'Comfortaa Variable', system-ui;
+  }
+}
