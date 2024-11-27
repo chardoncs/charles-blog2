@@ -41,7 +41,7 @@
 </script>
 
 <svelte:head>
-  <title>Screenshot two ({data.year}) | Charles Dong</title>
+  <title>Two words ({data.year}) | Charles Dong</title>
 </svelte:head>
 
 {#if status === "expired"}
