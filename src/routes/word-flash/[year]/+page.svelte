@@ -18,7 +18,7 @@
       if (interval === undefined) {
         interval = setInterval(() => {
           idx = (idx + 1) % words.length
-        })
+        }, 25)
       }
     } else {
       if (interval !== undefined) {
