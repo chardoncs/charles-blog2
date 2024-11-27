@@ -7,17 +7,6 @@
 	let { children } = $props()
 </script>
 
-<svelte:head>
-  <title>Charles Dong</title>
-
-  <meta name="description" content="Charles' personal website" />
-
-  <meta property="og:title" content="Charles Dong" />
-  <meta property="og:description" content="Charles' personal website" />
-  <meta property="og:image" content="https://chardoncs.dev/images/og/thumbnail.png" />
-  <meta property="og:image:type" content="image/png" />
-</svelte:head>
-
 <ModeWatcher defaultMode="system" />
 
 <div class="w-full h-dvh flex flex-col pointer-events-none overflow-x-clip">

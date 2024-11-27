@@ -38,10 +38,19 @@
   onMount(() => {
     status = currentYear >= data.year ? "expired" : "warning"
   })
+
+  const title = `Two words (${data.year}) | Charles Dong`
+  const description = `Word flash (${data.year})`
 </script>
 
 <svelte:head>
-  <title>Two words ({data.year}) | Charles Dong</title>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://chardoncs.dev/images/og/thumbnail-word-flash.png" />
+  <meta property="og:image:type" content="image/png" />
 </svelte:head>
 
 {#if status === "expired"}
