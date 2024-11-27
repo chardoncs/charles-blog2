@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /quotes/*
+Allow: /word-flash/*
 Disallow: /images/*
 Allow: /images/og/*
