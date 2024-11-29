@@ -29,9 +29,9 @@
 <nav
   class={cn(
     "flex-shrink-0 pointer-events-auto flex gap-3 md:gap-6 pl-8 pr-4 py-3 rounded-2xl mx-5 my-4 place-items-center",
-    "backdrop-blur-lg bg-zinc-50 dark:bg-zinc-950/20",
-    "border border-zinc-200 dark:border-zinc-800",
-    docked ? "group translate-x-[86%] hover:translate-x-0 transition-transform pl-4 mr-0" : "",
+    "backdrop-blur-lg bg-background/50",
+    "border border-border",
+    docked && "group translate-x-[86%] hover:translate-x-0 transition-transform pl-4 mr-0",
   )}
 >
   {#if docked}
@@ -48,7 +48,7 @@
       {target}
       class={cn(
         "hover:underline cursor-pointer",
-        pathPattern?.test(path) ? "active" : undefined,
+        pathPattern?.test(path) && "active",
       )}
     >
       {name}
