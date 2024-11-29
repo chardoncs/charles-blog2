@@ -3,8 +3,9 @@
   import type { NavItem } from "$lib/models/nav-item"
   import { cn } from "$lib/utils"
   import ModeToggle from "../mode-toggle.svelte"
-  import { onMount } from "svelte"
   import { ChevronLeftIcon } from "lucide-svelte"
+
+  const { path = "" }: { path: string } = $props()
 
   const dockedFor: RegExp = /^\/word-flash\/.+$/
 
@@ -22,13 +23,7 @@
     },
   ]
 
-  let path = $state("")
   let docked = $derived(dockedFor.test(path))
-
-  onMount(() => {
-    path = window.location.pathname
-  })
-
 </script>
 
 <nav
@@ -48,9 +43,6 @@
     <a
       {href}
       onclick={() => {
-        if (href) {
-          path = href
-        }
         onClick?.call(null)
       }}
       {target}
