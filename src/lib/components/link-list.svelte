@@ -19,22 +19,16 @@
       icon: "bluesky.svg",
       description: "Bluesky: @chardoncs.dev",
       href: "https://bsky.app/profile/chardoncs.dev",
-      styleClass: "bg-blue-600 hover:bg-blue-700",
-      iconClass: "invert",
     },
     {
       icon: "mastodon.svg",
       description: "Mastodon: @chardon_cs@mastodon.social",
       href: "https://mastodon.social/@chardon_cs",
-      styleClass: "bg-purple-600 hover:bg-purple-700",
-      iconClass: "invert",
     },
     {
       icon: "twitter-brands-solid.svg",
       description: "Twitter: @chardon_cs",
       href: "https://twitter.com/chardon_cs",
-      styleClass: "bg-sky-600 hover:bg-sky-700",
-      iconClass: "invert",
     },
     {
       name: "LinkedIn",
@@ -51,7 +45,7 @@
           <Button
             builders={[builder]}
             size={icon ? "icon" : "sm"}
-            variant="outline"
+            variant="link"
             {href}
             target="_blank"
             onclick={() => onClick?.call(null)}
