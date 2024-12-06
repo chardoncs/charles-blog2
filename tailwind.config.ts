@@ -2,7 +2,6 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-	darkMode: ["class"],
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 	safelist: ["dark"],
 	theme: {
@@ -55,9 +54,12 @@ const config: Config = {
 				sm: "calc(var(--radius) - 4px)"
 			},
 			fontFamily: {
-				sans: ["VT323", ...fontFamily.mono]
-			}
-		}
+				sans: ["VT323", ...fontFamily.mono, ...fontFamily.sans]
+			},
+		},
+		animation: {
+			"blink": "blink 600ms linear infinite",
+		},
 	},
 };
 

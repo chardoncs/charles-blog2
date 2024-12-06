@@ -61,7 +61,7 @@
   <!-- svelte-ignore a11y_interactive_supports_focus -->
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <div onclick={() => status = "flashing"} role="button" class="cursor-pointer flex flex-col gap-2">
-    <span class="text-red-600 dark:text-red-300 text-2xl font-bold">Seizure Warning: flashing text may cause epilepsy to some people!</span>
+    <span class="text-red-300 text-2xl font-bold">Seizure Warning: flashing text may cause epilepsy to some people!</span>
     <span class="text-xl animate-pulse">Click to continue</span>
   </div>
 {/if}

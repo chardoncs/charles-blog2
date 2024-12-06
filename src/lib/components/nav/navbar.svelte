@@ -30,7 +30,7 @@
   class={cn(
     "flex-shrink-0 pointer-events-auto flex gap-3 md:gap-6 pl-8 pr-4 py-3 rounded-md mx-5 my-4 place-items-center",
     "backdrop-blur-lg bg-background/50",
-    "border border-border",
+    "border border-border text-xl",
     docked && "group translate-x-[86%] hover:translate-x-0 transition-transform pl-4 mr-0",
   )}
 >

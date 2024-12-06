@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Button } from "./ui/button";
   import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu"
-  import { userPrefersMode, setMode, mode } from "mode-watcher"
   import { SunIcon, MoonStarIcon, CheckIcon } from "lucide-svelte"
   import { cn } from "$lib/utils"
 
@@ -9,6 +8,8 @@
     name: string
     value: "light" | "dark" | "system"
   }
+
+  const mode: string = "dark"
 
   const modes: Mode[] = [
     {
@@ -19,10 +20,6 @@
       name: "Dark",
       value: "dark",
     },
-    {
-      name: "System",
-      value: "system",
-    },
   ]
 </script>
 
@@ -32,11 +29,11 @@
       builders={[builder]}
       variant="outline"
       style="icon"
-      title={`Current Mode: ${$userPrefersMode}`}
+      title={`Current Mode: dark`}
     >
-      {#if $mode === "light"}
+      {#if mode === "light"}
         <SunIcon />
-      {:else if $mode === "dark"}
+      {:else if mode === "dark"}
         <MoonStarIcon />
       {/if}
     </Button>
@@ -44,12 +41,16 @@
       {#each modes as { name, value } (value)}
         <DropdownMenuItem
           class="flex place-items-center gap-1"
-          onclick={() => setMode(value)}
+          onclick={() => {
+            if (value === "light") {
+              window.open("/images/cat-light-mode.gif")
+            }
+          }}
         >
           <CheckIcon
             class={cn(
               "size-4",
-              $userPrefersMode !== value && "text-transparent",
+              mode !== value && "text-transparent",
             )}
           />
           {name}

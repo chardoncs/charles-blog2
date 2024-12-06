@@ -2,18 +2,57 @@
   import LinkList from "$lib/components/link-list.svelte";
   import { FingerprintIcon, MailIcon } from "lucide-svelte"
   import { Separator } from "$lib/components/ui/separator"
+  import { onMount } from "svelte"
+  import { cn } from "$lib/utils"
 
   const email = "chardon_cs@proton.me"
   const orcid = "0009-0002-1296-4256"
+
+  const fullTitle = "cat ./profile.txt"
+  let revealLength = $state(0)
+
+  let title = $derived(fullTitle.substring(0, revealLength))
+
+  let showMainPart = $state(false)
+
+  onMount(() => {
+    let interval: number | undefined = undefined
+
+    setTimeout(() => {
+      interval = setInterval(() => {
+        if (revealLength >= fullTitle.length) {
+          clearInterval(interval)
+          setTimeout(() => {
+            showMainPart = true
+          }, 100)
+          return
+        }
+
+        revealLength++
+      }, 30)
+    }, 500)
+
+    return () => {
+      if (interval !== undefined) {
+        clearInterval(interval)
+      }
+    }
+  })
 </script>
 
-<div class="flex flex-col gap-2">
-  <div class="flex flex-col gap-1">
-    <h1 class="font-bold text-3xl">Charles Dong</h1>
+<h1 class="text-2xl self-start">$ {title}{#if !showMainPart}<span class="animate-blink">_</span>{/if}</h1>
+<div
+  class={cn(
+    "flex flex-col gap-2 transition-opacity duration-[10ms] ease-linear",
+    showMainPart ? "opacity-100" : "opacity-0",
+  )}
+>
+  <div class="flex flex-col">
+    <p class="font-bold text-2xl">Charles Dong</p>
     <p>👨 he/him</p>
     <p>Graduate student 👨‍🎓, former (and want-to-be-again) software engineer 👨‍💻, Rustacean 🦀 & newcomer Zigger 🦎, computer & programming & FOSS lover 💻</p>
     <Separator />
-    <div class="text-sm flex gap-2 place-items-center">
+    <div class="flex gap-2 place-items-center">
       <a
         href="https://en.wikipedia.org/wiki/Public_key_fingerprint"
         target="_blank"

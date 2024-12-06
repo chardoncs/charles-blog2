@@ -19,21 +19,21 @@
       icon: "bluesky.svg",
       description: "Bluesky: @chardoncs.dev",
       href: "https://bsky.app/profile/chardoncs.dev",
-      styleClass: "bg-blue-600 hover:bg-blue-500 dark:hover:bg-blue-700",
+      styleClass: "bg-blue-600 hover:bg-blue-700",
       iconClass: "invert",
     },
     {
       icon: "mastodon.svg",
       description: "Mastodon: @chardon_cs@mastodon.social",
       href: "https://mastodon.social/@chardon_cs",
-      styleClass: "bg-purple-600 hover:bg-purple-500 dark:hover:bg-purple-700",
+      styleClass: "bg-purple-600 hover:bg-purple-700",
       iconClass: "invert",
     },
     {
       icon: "twitter-brands-solid.svg",
       description: "Twitter: @chardon_cs",
       href: "https://twitter.com/chardon_cs",
-      styleClass: "bg-sky-600 hover:bg-sky-500 dark:hover:bg-sky-700",
+      styleClass: "bg-sky-600 hover:bg-sky-700",
       iconClass: "invert",
     },
     {
@@ -65,7 +65,7 @@
                 alt={description}
                 class={cn(
                   "size-5",
-                  styleClass || iconClass ? undefined : "dark:invert",
+                  styleClass || iconClass ? undefined : "invert",
                   iconClass,
                 )}
               />
