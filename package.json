@@ -14,6 +14,7 @@
     "@fontsource-variable/caveat": "^5.1.0",
     "@fontsource-variable/comfortaa": "^5.1.0",
     "@fontsource-variable/overpass": "^5.1.1",
+    "@fontsource/vt323": "^5.1.0",
     "@sveltejs/adapter-auto": "^3.3.1",
     "@sveltejs/kit": "^2.9.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.2",

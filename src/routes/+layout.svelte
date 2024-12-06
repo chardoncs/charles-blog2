@@ -1,6 +1,6 @@
 <script lang="ts">
   import '../app.css'
-  import "@fontsource-variable/overpass"
+  import "@fontsource/vt323"
   import { ModeWatcher } from "mode-watcher"
 	import Navbar from '$lib/components/nav/navbar.svelte'
   import type { Snippet } from 'svelte'
