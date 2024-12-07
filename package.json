@@ -21,7 +21,7 @@
     "bits-ui": "^0.21.16",
     "clsx": "^2.1.1",
     "lucide-svelte": "^0.456.0",
-    "svelte": "^5.8.0",
+    "svelte": "^5.8.1",
     "svelte-adapter-bun": "^0.5.2",
     "svelte-check": "^4.1.1",
     "tailwind-merge": "^2.5.5",
