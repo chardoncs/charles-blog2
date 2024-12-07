@@ -51,7 +51,9 @@
   })
 </script>
 
-<h1 class="text-2xl self-start">$ {title}{#if !showMainPart}<span class="animate-blink">_</span>{/if}</h1>
+<span class="text-2xl self-start">
+  $ {title}{#if !showMainPart}<span class="animate-blink" id="cursor-symbol">_</span>{/if}
+</span>
 <div
   class={cn(
     "flex flex-col gap-2 transition-opacity duration-[10ms] ease-linear",
@@ -93,3 +95,8 @@
     <LinkList />
   </div>
 </div>
+<span class="text-2xl self-start h-8">
+  {#if showMainPart}
+    <span class="animate-blink" id="cursor-symbol">_</span>
+  {/if}
+</span>
