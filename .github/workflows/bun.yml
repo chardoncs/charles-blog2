@@ -44,6 +44,7 @@ jobs:
         with:
           name: target-archive
           path: ./charles-blog2.tar.xz
+          retention-days: 1
 
   deployment:
     needs: build
