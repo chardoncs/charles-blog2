@@ -5,7 +5,7 @@
   import type { Snippet } from 'svelte'
   import type { LayoutData } from './$types'
 
-	let { children, data }: { children: Snippet, data: LayoutData } = $props()
+  let { children, data }: { children: Snippet, data: LayoutData } = $props()
 </script>
 
 <div class="w-full h-dvh flex flex-col pointer-events-none overflow-x-clip">
