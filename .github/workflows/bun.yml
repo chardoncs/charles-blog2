@@ -67,7 +67,7 @@ jobs:
           target: /home/${{ secrets.USER }}/
 
       - name: Deploy project on server(s)
-        uses: appleboy/ssh-action@v1.1.0
+        uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
