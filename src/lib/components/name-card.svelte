@@ -4,6 +4,7 @@
   import { Separator } from "$lib/components/ui/separator"
   import { onMount } from "svelte"
   import { cn } from "$lib/utils"
+  import { suspend } from "$lib/async/suspend"
 
   const email = "chardon_cs@proton.me"
   const orcid = "0009-0002-1296-4256"
@@ -17,27 +18,27 @@
   let showMainPart = $state(false)
 
   async function rmRoot() {
-    await new Promise(r => setTimeout(r, 500))
+    await suspend(500)
 
     while (-revealLength < wrongTitle.length) {
       revealLength--
-      await new Promise(r => setTimeout(r, 30)) 
+      await suspend(30)
     }
 
-    await new Promise(r => setTimeout(r, 300))
+    await suspend(300)
 
     while (revealLength < 0) {
       revealLength++
-      await new Promise(r => setTimeout(r, 30)) 
+      await suspend(30)
     }
   }
 
   async function catProfile() {
-    await new Promise(r => setTimeout(r, 500))
+    await suspend(500)
 
     while (revealLength < fullTitle.length) {
       revealLength++
-      await new Promise(r => setTimeout(r, 30)) 
+      await suspend(30)
     }
   }
 
