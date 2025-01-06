@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { LinkItem } from "$lib/models/link-item"
   import { cn } from "$lib/utils"
-  import { Button } from "./ui/button"
-  import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip"
+  import { Button, buttonVariants } from "./ui/button"
+  import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip"
 
   const links: LinkItem[] = [
     {
@@ -38,48 +38,49 @@
 </script>
 
 <div>
-  <ul class="flex gap-2 place-items-center">
+  <div class="flex gap-2 place-items-center">
     {#each links as { icon, name, description, footnote, href, onClick, styleClass, iconClass }}
-      <Tooltip>
-        <TooltipTrigger asChild let:builder>
-          <Button
-            builders={[builder]}
-            size={icon ? "icon" : "sm"}
-            variant="link"
-            {href}
-            target="_blank"
-            onclick={() => onClick?.call(null)}
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger
             class={cn(
+              buttonVariants({ size: icon ? "icon" : "sm", variant: "link" }),
               styleClass,
             )}
           >
-            {#if typeof icon === "string"}
-              <img
-                src={`/images/icons/${icon}`}
-                alt={description}
-                class={cn(
-                  "size-5",
-                  styleClass || iconClass ? undefined : "invert",
-                  iconClass,
-                )}
-              />
-            {:else}
-              {icon}
-            {/if}
-            {#if !icon}
-              {name ?? description}
-            {/if}
-          </Button>
-        </TooltipTrigger>
-        {#if description || footnote}
-          <TooltipContent>
-            <p>{description}</p>
-            {#if footnote}
-              <p class="text-xs">&gt;&nbsp;{footnote}</p>
-            {/if}
-          </TooltipContent>
-        {/if}
-      </Tooltip>
+            <a
+              {href}
+              target="_blank"
+              onclick={() => onClick?.()}
+            >
+              {#if typeof icon === "string"}
+                <img
+                  src={`/images/icons/${icon}`}
+                  alt={description}
+                  class={cn(
+                    "size-5",
+                    styleClass || iconClass ? undefined : "invert",
+                    iconClass,
+                  )}
+                />
+              {:else}
+                {icon}
+              {/if}
+              {#if !icon}
+                {name ?? description}
+              {/if}
+            </a>
+          </TooltipTrigger>
+          {#if description || footnote}
+            <TooltipContent>
+              <p>{description}</p>
+              {#if footnote}
+                <p class="text-xs">&gt;&nbsp;{footnote}</p>
+              {/if}
+            </TooltipContent>
+          {/if}
+        </Tooltip>
+      </TooltipProvider>
     {/each}
-  </ul>
+  </div>
 </div>
