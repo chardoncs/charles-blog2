@@ -3,7 +3,7 @@ import { ContactLinks } from "../info/contact-links"
 function MainSection() {
   return (
     <div class="box md:grow">
-      <h2>Terminal (WIP)</h2>
+      <h2>Intro</h2>
     </div>
   )
 }

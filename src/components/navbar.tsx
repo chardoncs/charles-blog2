@@ -55,7 +55,7 @@ export function Navbar() {
       </div>
       <div>
         <NavbarItem
-          name={"[L]ight Mode"}
+          name={"Light Mode"}
           onClick={() => {
             window.open("/images/cat-light-mode.gif")
           }}

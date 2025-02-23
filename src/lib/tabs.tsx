@@ -11,12 +11,12 @@ export function switchToTab(id: string) {
 export const TAB_ITEMS: Tab[] = [
   {
     id: "",
-    name: "_Home",
+    name: "Home",
     pane: <HomePane />,
   },
   {
     id: "secrets",
-    name: "_Deepest Secrets 🙈",
+    name: "Deepest Secrets 🙈",
     noSwitch: true,
     onClick() {
       window.open("https://youtu.be/dQw4w9WgXcQ?si=TCt76zicD391XvgT", "_blank")
