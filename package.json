@@ -9,7 +9,6 @@
   "dependencies": {
     "@fontsource-variable/caveat": "^5.1.1",
     "@fontsource-variable/fira-code": "^5.1.1",
-    "@mdx-js/esbuild": "^3.1.0",
     "@mdx-js/mdx": "^3.1.0",
     "@mdx-js/preact": "^3.1.0",
     "@nanostores/preact": "^0.5.2",
@@ -21,6 +20,7 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
+    "@mdx-js/esbuild": "^3.1.0",
     "@types/bun": "^1.2.3",
     "@types/mdx": "^2.0.13"
   }

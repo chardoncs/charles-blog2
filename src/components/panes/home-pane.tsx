@@ -1,12 +1,15 @@
 import { ContactLinks } from "../info/contact-links"
 import Intro from "../../mdx/intro.mdx"
+import { FormattedText } from "../formatted-text"
 
 function MainSection() {
   return (
     <div class="box md:grow">
       <h2>Intro</h2>
 
-      <Intro />
+      <FormattedText>
+        <Intro />
+      </FormattedText>
     </div>
   )
 }
