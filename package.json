@@ -20,6 +20,7 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@types/bun": "^1.2.3"
+    "@types/bun": "^1.2.3",
+    "@types/mdx": "^2.0.13"
   }
 }
