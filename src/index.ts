@@ -1,6 +1,5 @@
 import { serve } from "bun"
 import index from "./index.html"
-import { getFileResponse } from "./lib/utils-server"
 import { getFileRoutes } from "./files"
 
 const server = serve({
@@ -14,6 +13,9 @@ const server = serve({
       { path: "images/curly-arrow.svg", mime: "image/svg+xml" },
       { path: "images/icons/bluesky.svg", mime: "image/svg+xml" },
       { path: "images/icons/github.svg", mime: "image/svg+xml" },
+      { path: "images/icons/codeberg.svg", mime: "image/svg+xml" },
+      { path: "images/icons/x.svg", mime: "image/svg+xml" },
+      { path: "images/icons/mastodon.svg", mime: "image/svg+xml" },
     ),
   },
   development: Bun.env.DEBUG === "1",
