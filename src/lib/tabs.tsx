@@ -1,6 +1,6 @@
 import { atom } from "nanostores"
 import { Tab } from "./models/tab"
-import { MainPane } from "../components/main-pane"
+import { HomePane } from "../components/panes/home-pane"
 
 export const $currentTab = atom<string>("")
 
@@ -12,7 +12,7 @@ export const TAB_ITEMS: Tab[] = [
   {
     id: "",
     name: "_Home",
-    pane: MainPane,
+    pane: <HomePane />,
   },
   {
     id: "secrets",

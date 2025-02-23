@@ -37,8 +37,8 @@ export function Navbar() {
   const currentTab = useStore($currentTab)
 
   return (
-    <nav class="flex flex-col sm:flex-row bg-zinc-800 shrink-0">
-      <div class="flex flex-col sm:flex-row sm:grow">
+    <nav class="flex flex-col md:flex-row bg-zinc-800 shrink-0">
+      <div class="flex flex-col md:flex-row md:grow">
         {TAB_ITEMS.map(({ id, name, onClick, noSwitch }) => (
           <NavbarItem
             active={currentTab === id}
