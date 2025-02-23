@@ -3,11 +3,25 @@
 @theme {
   --color-background: oklch(5.49% 0 60);
   --color-foreground: oklch(97.18% 0 60);
+  --default-font-family: "Fira Code Variable", monospace, "Noto Sans", sans-serif;
 }
  
 @layer base {
   body {
     @apply bg-background text-foreground;
+    font-variant-ligatures: none;
+  }
+
+  .box {
+    @apply border border-foreground p-4;
+  }
+
+  .box > h2:first-child {
+    @apply absolute float-left -mt-7 -ml-2 bg-background px-2;
+  }
+
+  a {
+    @apply hover:underline cursor-pointer;
   }
 
   @keyframes blink {
