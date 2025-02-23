@@ -1,7 +1,9 @@
+import { ContactLinks } from "../info/contact-links"
+
 function MainSection() {
   return (
     <div class="box md:grow">
-      <h2>Terminal</h2>
+      <h2>Terminal (WIP)</h2>
     </div>
   )
 }
@@ -10,13 +12,15 @@ function LinkSection() {
   return (
     <div class="box md:grow">
       <h2>Links</h2>
+
+      <ContactLinks />
     </div>
   )
 }
 
-function FerrisSection() {
+function RandomWordsSection() {
   return (
-    <div class="box md:shrink-0">
+    <div class="box md:shrink">
       <h2>???</h2>
     </div>
   )
@@ -28,7 +32,7 @@ export function HomePane() {
       <MainSection />
       <div class="flex flex-col gap-4 shrink-0 md:w-52 lg:w-60 xl:w-72">
         <LinkSection />
-        <FerrisSection />
+        <RandomWordsSection />
       </div>
     </div>
   )

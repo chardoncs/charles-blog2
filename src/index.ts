@@ -1,34 +1,20 @@
 import { serve } from "bun"
 import index from "./index.html"
+import { getFileResponse } from "./lib/utils-server"
+import { getFileRoutes } from "./files"
 
 const server = serve({
   routes: {
     "/": index,
-    "/robots.txt": new Response(await Bun.file("./public/robots.txt").text(), {
-      headers: {
-        "Content-Type": "text/plain",
-      },
-    }),
-    "/images/og/thumbnail.png": new Response(await Bun.file("./public/images/og/thumbnail.png").bytes(), {
-      headers: {
-        "Content-Type": "image/png",
-      },
-    }),
-    "/images/cat-light-mode.gif": new Response(await Bun.file("./public/images/cat-light-mode.gif").bytes(), {
-      headers: {
-        "Content-Type": "image/gif",
-      },
-    }),
-    "/images/ferris-knife.png": new Response(await Bun.file("./public/images/ferris-knife.png").bytes(), {
-      headers: {
-        "Content-Type": "image/png",
-      }
-    }),
-    "/images/curly-arrow.svg": new Response(await Bun.file("./public/images/curly-arrow.svg").text(), {
-      headers: {
-        "Content-Type": "image/svg+xml",
-      },
-    }),
+    ...await getFileRoutes(
+      { path: "robots.txt", mime: "text/plain" },
+      { path: "images/og/thumbnail.png", mime: "image/png" },
+      { path: "images/cat-light-mode.gif", mime: "image/gif" },
+      { path: "images/ferris-knife.png", mime: "image/png" },
+      { path: "images/curly-arrow.svg", mime: "image/svg+xml" },
+      { path: "images/icons/bluesky.svg", mime: "image/svg+xml" },
+      { path: "images/icons/github.svg", mime: "image/svg+xml" },
+    ),
   },
   development: Bun.env.DEBUG === "1",
 })
