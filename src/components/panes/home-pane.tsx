@@ -1,9 +1,12 @@
 import { ContactLinks } from "../info/contact-links"
+import Intro from "../../mdx/intro.mdx"
 
 function MainSection() {
   return (
     <div class="box md:grow">
       <h2>Intro</h2>
+
+      <Intro />
     </div>
   )
 }
