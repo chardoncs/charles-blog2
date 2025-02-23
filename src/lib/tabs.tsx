@@ -15,6 +15,11 @@ export const TAB_ITEMS: Tab[] = [
     pane: <HomePane />,
   },
   {
+    id: "cv",
+    name: "CV",
+    noSwitch: true,
+  },
+  {
     id: "secrets",
     name: "Deepest Secrets 🙈",
     noSwitch: true,
