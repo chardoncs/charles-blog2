@@ -53,7 +53,7 @@ export function Navbar() {
           />
         ))}
       </div>
-      <div>
+      <div class="flex flex-col md:flex-row shrink-0">
         <NavbarItem
           name={"Light Mode"}
           onClick={() => {
