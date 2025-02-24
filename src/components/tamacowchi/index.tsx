@@ -1,5 +1,5 @@
 import { signal } from "@preact/signals"
-import { useEffect, useMemo, useState } from "preact/hooks"
+import { useCallback, useEffect, useMemo, useState } from "preact/hooks"
 import { interrupt } from "../../lib/utils/interruption"
 import { COW_STATUS, CowStatus } from "./status"
 import "./tamacowchi.css"
@@ -127,21 +127,30 @@ export function Tamacowchi() {
     })()
   }, [content])
 
+  const saySomething = useCallback(() => {
+    if (!content) {
+      setContent(CANDIDATE_SENTENCES[Math.floor(Math.random() * CANDIDATE_SENTENCES.length)])
+    }
+  }, [content])
+
   return (
     <div
-      class="relative md:min-h-36 h-full select-none"
-      onMouseOver={() => {
-        if (!content) {
-          setContent(CANDIDATE_SENTENCES[Math.floor(Math.random() * CANDIDATE_SENTENCES.length)])
-        }
-      }}
+      class="relative min-h-36 h-full select-none"
+      onMouseOver={() => saySomething()}
+      onTouchStart={() => saySomething()}
     >
       {typeof output === "string" ? (
         <pre class={cn(
           "tamacowchi-text-root absolute bottom-0 right-0 leading-none! text-sm",
           isMirrored && "-scale-x-100",
         )}>
-          <code onMouseDown={() => setIsPressed(true)} onMouseUp={() => setIsPressed(false)} onMouseLeave={() => setIsPressed(false)}>{output ?? "?"}</code>
+          <code
+            onMouseDown={() => setIsPressed(true)}
+            onMouseUp={() => setIsPressed(false)}
+            onMouseLeave={() => setIsPressed(false)}
+            onTouchStart={() => setIsPressed(true)}
+            onTouchEnd={() => setIsPressed(false)}
+          >{output ?? "?"}</code>
         </pre>
       ) : (
         <div class="absolute bottom-0 right-0">
