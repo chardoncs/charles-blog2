@@ -1,0 +1,33 @@
+import { FingerprintIcon, MailIcon } from "lucide-preact"
+
+### Charles Dong
+
+👨 he/him
+
+Graduate student 👨‍🎓, former (and wanna-be-again) software engineer 👨‍💻,
+Rustacean 🦀 & newcomer Zigger 🦎, computer & programming & FOSS lover 💻
+
+---
+
+<div class="flex gap-2 items-center text-sm">
+  <a href="https://en.wikipedia.org/wiki/Public_key_fingerprint" target="_blank">
+    <FingerprintIcon class="size-4 cursor-help" />
+  </a>
+  <span>6971 3F22 36BB D93D 3E78 EFEF 0D56 181B 4841 4DE8</span>
+</div>
+
+export const email = "chardon_cs@proton.me"
+
+<div class="flex gap-2 items-center text-sm">
+  <MailIcon class="size-4" />
+  [{email}](mailto:{email})
+</div>
+
+export const orcid = "0009-0002-1296-4256"
+
+<div class="flex gap-2 items-center text-sm">
+  <a href="https://en.wikipedia.org/wiki/ORCID" target="_blank">
+    <img src="/images/orcid.svg" alt="ORCID" class="invert size-4 cursor-help" />
+  </a>
+  <a href={`https://orcid.org/${orcid}`} target="_blank">{orcid}</a>
+</div>

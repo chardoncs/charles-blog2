@@ -1,37 +1,27 @@
 {
   "name": "charles-blog2",
-  "version": "2.6.4",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    "dev": "DEBUG=1 bun run --watch ./src/index.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/caveat": "^5.1.1",
+    "@fontsource-variable/fira-code": "^5.1.1",
+    "@mdx-js/mdx": "^3.1.0",
+    "@mdx-js/preact": "^3.1.0",
+    "@preact/signals": "^2.0.1",
+    "bun-plugin-tailwind": "^0.0.14",
+    "clsx": "^2.1.1",
+    "cowsay": "^1.6.0",
+    "lucide-preact": "^0.475.0",
+    "preact": "^10.26.2",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@fontsource-variable/caveat": "^5.1.1",
-    "@fontsource-variable/comfortaa": "^5.1.1",
-    "@fontsource/vt323": "^5.1.1",
-    "@sveltejs/adapter-auto": "^3.3.1",
-    "@sveltejs/kit": "^2.17.1",
-    "@sveltejs/vite-plugin-svelte": "^4.0.4",
-    "@types/bun": "^1.2.2",
-    "autoprefixer": "^10.4.20",
-    "bits-ui": "^1.1.0",
-    "clsx": "^2.1.1",
-    "lucide-svelte": "^0.469.0",
-    "svelte": "^5.20.0",
-    "svelte-adapter-bun": "^0.5.2",
-    "svelte-check": "^4.1.4",
-    "tailwind-merge": "^2.6.0",
-    "tailwind-variants": "^0.3.1",
-    "tailwindcss": "^3.4.17",
-    "tailwindcss-animate": "^1.0.7",
-    "vite": "^5.4.14"
-  },
-  "peerDependencies": {
-    "typescript": "latest"
+    "@mdx-js/esbuild": "^3.1.0",
+    "@types/bun": "^1.2.3",
+    "@types/mdx": "^2.0.13"
   }
 }
