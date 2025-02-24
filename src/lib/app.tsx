@@ -1,6 +1,7 @@
 import { MainPane } from "../components/main-pane"
 import { Navbar } from "../components/navbar"
 import { StatusBar } from "../components/status-bar"
+import "@fontsource-variable/fira-code"
 
 export function App() {
   return (
