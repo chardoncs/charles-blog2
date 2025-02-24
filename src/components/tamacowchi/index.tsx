@@ -145,6 +145,7 @@ export function Tamacowchi() {
           isMirrored && "-scale-x-100",
         )}>
           <code
+            class="font-display"
             onMouseDown={() => setIsPressed(true)}
             onMouseUp={() => setIsPressed(false)}
             onMouseLeave={() => setIsPressed(false)}
