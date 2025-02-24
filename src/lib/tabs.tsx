@@ -1,11 +1,11 @@
-import { atom } from "nanostores"
 import { Tab } from "./models/tab"
 import { HomePane } from "../components/panes/home-pane"
+import { signal } from "@preact/signals"
 
-export const $currentTab = atom<string>("")
+export const $currentTab = signal<string>("")
 
 export function switchToTab(id: string) {
-  $currentTab.set(id)
+  $currentTab.value = id
 }
 
 export const TAB_ITEMS: Tab[] = [

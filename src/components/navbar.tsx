@@ -1,4 +1,3 @@
-import { useStore } from "@nanostores/preact"
 import { $currentTab, switchToTab, TAB_ITEMS } from "../lib/tabs"
 import { cn } from "../lib/utils"
 import { useMemo } from "preact/hooks"
@@ -34,7 +33,7 @@ function NavbarItem({ active, name, onClick }: NavbarItemProps) {
 }
 
 export function Navbar() {
-  const currentTab = useStore($currentTab)
+  const currentTab = $currentTab.value
 
   return (
     <nav class="flex flex-col md:flex-row bg-zinc-800 shrink-0">

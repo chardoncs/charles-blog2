@@ -1,8 +1,7 @@
-import { useStore } from "@nanostores/preact"
 import { $currentTab, TAB_ITEMS } from "../lib/tabs"
 
 export function MainPane() {
-  const currentTab = useStore($currentTab)
+  const currentTab = $currentTab.value
 
   return (
     <div class="md:grow px-3 pt-4 pb-2">
