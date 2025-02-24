@@ -16,6 +16,7 @@ const server = serve({
       { path: "images/icons/codeberg.svg", mime: "image/svg+xml" },
       { path: "images/icons/x.svg", mime: "image/svg+xml" },
       { path: "images/icons/mastodon.svg", mime: "image/svg+xml" },
+      { path: "files/cydong-cv_v3.pdf", mime: "application/pdf" },
     ),
   },
   development: Bun.env.DEBUG === "1",

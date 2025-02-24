@@ -18,6 +18,9 @@ export const TAB_ITEMS: Tab[] = [
     id: "cv",
     name: "CV",
     noSwitch: true,
+    onClick() {
+      window.open("/files/cydong-cv_v3.pdf", "_blank")
+    },
   },
   {
     id: "secrets",
