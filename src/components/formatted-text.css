@@ -28,4 +28,24 @@
   .formatted-text hr {
     @apply my-2;
   }
+
+  .formatted-text ul {
+    @apply list-disc;
+  }
+
+  .formatted-text ol {
+    @apply list-decimal;
+  }
+
+  .formatted-text :is(ol, ul) {
+    @apply ml-6;
+  }
+
+  .formatted-text > :is(ol, ul) > :is(ol, ul) {
+    @apply ml-10;
+  }
+
+  .formatted-text > :is(ol, ul) ul {
+    list-style-type: circle;
+  }
 }
