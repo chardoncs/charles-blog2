@@ -46,7 +46,7 @@ export const COW_STATUS: CowStatusDictionary = {
     })
   },
   "turning": `
-___/\\/\\___     
+___/\\/\\___   
 \\        /
 /  POOF! \\
 \\__    __/
