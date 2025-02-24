@@ -5,20 +5,25 @@ import { COW_STATUS, CowStatus } from "./status"
 import "./tamacowchi.css"
 import { cn } from "../../lib/utils"
 
-// Cow status (making it signal for resuming the cow's status)
-const cowStatus = signal<CowStatus>("idle")
+const cowGlobalStatus = signal<CowStatus>("idle")
 
 export function Tamacowchi() {
   const [blink, setBlink] = useState(false)
   const [content, setContent] = useState<string | undefined>(undefined)
 
+  const [isPressed, setIsPressed] = useState(false)
+
   const status = useMemo(() => {
-    if (blink && cowStatus.value === "idle") {
+    if (isPressed) {
+      return "pressed"
+    }
+
+    if (blink && cowGlobalStatus.value === "idle") {
       return "blink"
     }
 
-    return cowStatus.value
-  }, [cowStatus.value, blink])
+    return cowGlobalStatus.value
+  }, [cowGlobalStatus.value, blink, isPressed])
 
   const output = useMemo(() => {
     const outOrFn = COW_STATUS[status]
@@ -47,9 +52,13 @@ export function Tamacowchi() {
         <pre class={cn(
           "tamacowchi-text-root absolute bottom-0 right-0 leading-none! text-sm",
         )}>
-          <code>{output ?? "?"}</code>
+          <code onMouseDown={() => setIsPressed(true)} onMouseUp={() => setIsPressed(false)} onMouseLeave={() => setIsPressed(false)}>{output ?? "?"}</code>
         </pre>
-      ) : output}
+      ) : (
+        <div class="absolute bottom-0 right-0">
+          {output}
+        </div>
+      )}
     </div>
   )
 }
