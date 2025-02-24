@@ -13,6 +13,6 @@ export const CANDIDATE_SENTENCES = [
 ]
 
 export const TURNING_DICT: { [key: string]: ComponentChildren } = {
-  "Bun": <img src="/bun.svg" alt="Bun" class="size-10" />,
-  "Crablang": <img src="/images/ferris-knife.png" alt="Ferris knife" class="size-10" />,
+  "Bun": <img src="/bun.svg" alt="Bun" class="w-24 mr-6" />,
+  "Crablang": <img src="/images/ferris-knife.png" alt="Ferris knife" class="w-24 mr-6" />,
 }

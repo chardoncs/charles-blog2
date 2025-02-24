@@ -5,7 +5,7 @@ export type CowStatusDictionary = {
   [key: string]: string | ((content?: string) => string | ComponentChildren)
 }
 
-export type CowStatus = "idle" | "blink" | "turned" | "say" | "say_eyes-closed" | "pressed" | "say_pressed"
+export type CowStatus = "idle" | "blink" | "turning" | "turned" | "say" | "say_eyes-closed" | "pressed" | "say_pressed"
 
 export const COW_STATUS: CowStatusDictionary = {
   "idle": `
@@ -45,4 +45,11 @@ export const COW_STATUS: CowStatusDictionary = {
       eyes: "O<",
     })
   },
+  "turning": `
+___/\\/\\___     
+\\        /
+/  POOF! \\
+\\__    __/
+   \\  /
+    \\|`,
 }
