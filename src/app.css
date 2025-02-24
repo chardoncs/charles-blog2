@@ -4,7 +4,7 @@
   --color-background: oklch(5.49% 0 60);
   --color-foreground: oklch(97.18% 0 60);
 
-  --font-display: "Fira Code Variable", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, sans-serif;
+  --font-display: "Fira Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, sans-serif;
 }
  
 @layer base {
