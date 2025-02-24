@@ -4,6 +4,7 @@
   --color-background: oklch(5.49% 0 60);
   --color-foreground: oklch(97.18% 0 60);
   --default-font-family: "Fira Code Variable", monospace, "Noto Sans", sans-serif;
+  --font-mono: "Fira Code Variable", monospace, sans-serif;
 }
  
 @layer base {
