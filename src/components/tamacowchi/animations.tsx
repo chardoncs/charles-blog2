@@ -8,7 +8,7 @@ export interface TurningEvents {
   onTurningDone(children: ComponentChildren): void
 }
 
-const MIRROR_INTERVALS = [500, 300, 200, 100, 50, 30, 30, 30]
+const MIRROR_INTERVALS = [500, 300, 200, 100, 50, 30, 30, 30, 30, 30]
 
 export async function turnCow(children: ComponentChildren, evs: TurningEvents) {
   for (const interval of MIRROR_INTERVALS) {
