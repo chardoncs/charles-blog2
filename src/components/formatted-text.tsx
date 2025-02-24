@@ -1,4 +1,5 @@
 import { ComponentChildren } from "preact"
+import "./formatted-text.css"
 
 export interface FormattedTextProps {
   children: ComponentChildren
@@ -6,8 +7,8 @@ export interface FormattedTextProps {
 
 export function FormattedText({ children }: FormattedTextProps) {
   return (
-    <div class="formatted-text">
+    <article class="formatted-text">
       {children}
-    </div>
+    </article>
   )
 }
