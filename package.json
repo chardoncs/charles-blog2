@@ -16,11 +16,11 @@
     "clsx": "^2.1.1",
     "cowsay": "^1.6.0",
     "lucide-preact": "^0.475.0",
-    "preact": "^10.26.2",
+    "preact": "^10.26.3",
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@types/bun": "^1.2.3",
+    "@types/bun": "^1.2.4",
     "@types/mdx": "^2.0.13"
   }
 }
