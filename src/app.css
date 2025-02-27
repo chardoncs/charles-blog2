@@ -5,7 +5,7 @@
   --color-background: oklch(5.49% 0 60);
   --color-foreground: oklch(97.18% 0 60);
 
-  --font-display: "Fira Mono", var(--font-mono);
+  --font-display: "Fira Code", var(--font-mono), var(--font-sans);
 }
  
 @layer base {

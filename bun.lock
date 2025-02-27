@@ -4,7 +4,7 @@
     "": {
       "name": "charles-blog2",
       "dependencies": {
-        "@fontsource/fira-mono": "^5.1.1",
+        "@fontsource/fira-code": "^5.1.1",
         "@mdx-js/esbuild": "^3.1.0",
         "@mdx-js/mdx": "^3.1.0",
         "@mdx-js/preact": "^3.1.0",
@@ -13,11 +13,11 @@
         "clsx": "^2.1.1",
         "cowsay": "^1.6.0",
         "lucide-preact": "^0.475.0",
-        "preact": "^10.26.2",
+        "preact": "^10.26.3",
         "tailwind-merge": "^2.6.0",
       },
       "devDependencies": {
-        "@types/bun": "^1.2.3",
+        "@types/bun": "^1.2.4",
         "@types/mdx": "^2.0.13",
       },
     },
@@ -73,7 +73,7 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.25.0", "", { "os": "win32", "cpu": "x64" }, "sha512-ZENoHJBxA20C2zFzh6AI4fT6RraMzjYw4xKWemRTRmRVtN9c5DcH9r/f2ihEkMjOW5eGgrwCslG/+Y/3bL+DHQ=="],
 
-    "@fontsource/fira-mono": ["@fontsource/fira-mono@5.1.1", "", {}, "sha512-JDZUQuQQFTvPJgwOftXg44LOa7XYNqwTHHquEpi8rY6SK8m7Q5rWxmMX7nUOvRF2g+jc02mqmK2Y+WmviF9+VQ=="],
+    "@fontsource/fira-code": ["@fontsource/fira-code@5.1.1", "", {}, "sha512-w9b1CtWyfdyZP2Y/j7Z86SNYtLXMZ4yGtxrtw0qejjrGuzoasEoMhgdLJOwX9exrpKRVFaecKjcAuWkvmvOITw=="],
 
     "@mdx-js/esbuild": ["@mdx-js/esbuild@3.1.0", "", { "dependencies": { "@mdx-js/mdx": "^3.0.0", "@types/unist": "^3.0.0", "source-map": "^0.7.0", "vfile": "^6.0.0", "vfile-message": "^4.0.0" }, "peerDependencies": { "esbuild": ">=0.14.0" } }, "sha512-Jk42xUb1SEJxh6n2GBAtJjQISFIZccjz8XVEsHVhrlvZJAJziIxR9KyaFF6nTeTB/jCAFQGDgO7+oMRH/ApRsg=="],
 
