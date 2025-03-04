@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "DEBUG=1 bun run --watch ./src/index.ts"
+    "dev": "DEBUG=1 bun --hot run ./src/index.ts"
   },
   "dependencies": {
     "@fontsource/fira-code": "^5.1.1",
