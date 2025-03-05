@@ -20,7 +20,7 @@ const server = serve({
       { path: "bun.svg", mime: "image/svg+xml" },
     ),
   },
-  development: Bun.env.DEBUG === "1",
+  development: Bun.env.NODE_ENV === "development",
 })
 
 console.log(`Bun server listening at ${server.url}`)
