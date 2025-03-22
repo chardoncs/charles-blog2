@@ -1,7 +1,7 @@
-import { ContactLinks } from "../info/contact-links"
-import Intro from "../../mdx/intro.mdx"
-import { FormattedText } from "../formatted-text"
-import { Tamacowchi } from "../tamacowchi"
+import { ContactLinks } from "../info/contact-links";
+import Intro from "../../mdx/intro.mdx";
+import { FormattedText } from "../formatted-text";
+import { Tamacowchi } from "../tamacowchi";
 
 function MainSection() {
   return (
@@ -12,7 +12,7 @@ function MainSection() {
         <Intro />
       </FormattedText>
     </div>
-  )
+  );
 }
 
 function LinkSection() {
@@ -22,7 +22,7 @@ function LinkSection() {
 
       <ContactLinks />
     </div>
-  )
+  );
 }
 
 function RandomWordsSection() {
@@ -32,7 +32,7 @@ function RandomWordsSection() {
 
       <Tamacowchi />
     </div>
-  )
+  );
 }
 
 export function HomePane() {
@@ -44,5 +44,5 @@ export function HomePane() {
         <RandomWordsSection />
       </div>
     </div>
-  )
+  );
 }

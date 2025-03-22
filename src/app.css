@@ -7,7 +7,7 @@
 
   --font-display: "Fira Code", var(--font-mono), var(--font-sans);
 }
- 
+
 @layer base {
   body {
     @apply bg-background text-foreground font-display;

@@ -1,11 +1,11 @@
-import { serve } from "bun"
-import index from "./index.html"
-import { getFileRoutes } from "./files"
+import { serve } from "bun";
+import index from "./index.html";
+import { getFileRoutes } from "./files";
 
 const server = serve({
   routes: {
     "/": index,
-    ...await getFileRoutes(
+    ...(await getFileRoutes(
       { path: "robots.txt", mime: "text/plain" },
       { path: "images/og/thumbnail.png", mime: "image/png" },
       { path: "images/cat-light-mode.gif", mime: "image/gif" },
@@ -19,9 +19,9 @@ const server = serve({
       { path: "images/orcid.svg", mime: "image/svg+xml" },
       { path: "images/bun.svg", mime: "image/svg+xml" },
       { path: "images/dman.png", mime: "image/png" },
-    ),
+    )),
   },
   development: Bun.env.NODE_ENV === "development",
-})
+});
 
-console.log(`Bun server listening at ${server.url}`)
+console.log(`Bun server listening at ${server.url}`);

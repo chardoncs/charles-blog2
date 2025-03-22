@@ -1,4 +1,4 @@
-import { Link } from "../../lib/models/link"
+import { Link } from "../../lib/models/link";
 
 const LINKS: Link[] = [
   {
@@ -30,7 +30,7 @@ const LINKS: Link[] = [
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/yue-dong-237026128/",
   },
-]
+];
 
 export function ContactLinks() {
   return (
@@ -44,5 +44,5 @@ export function ContactLinks() {
         </li>
       ))}
     </ul>
-  )
+  );
 }

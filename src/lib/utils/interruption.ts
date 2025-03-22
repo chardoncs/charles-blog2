@@ -1,5 +1,5 @@
 export async function interrupt(milliseconds: number) {
   return new Promise<void>((resolve) => {
-    setTimeout(() => resolve(), milliseconds)
-  })
+    setTimeout(() => resolve(), milliseconds);
+  });
 }

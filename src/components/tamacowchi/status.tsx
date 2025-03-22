@@ -1,55 +1,55 @@
-import { ComponentChildren } from "preact"
-import cowsay from "cowsay"
+import { ComponentChildren } from "preact";
+import cowsay from "cowsay";
 
 export type CowStatusDictionary = {
-  [key: string]: string | ((content?: string) => string | ComponentChildren)
-}
+  [key: string]: string | ((content?: string) => string | ComponentChildren);
+};
 
-export type CowStatus = "idle" | "blink" | "turning" | "turned" | "say" | "say_eyes-closed" | "pressed" | "say_pressed"
+export type CowStatus = "idle" | "blink" | "turning" | "turned" | "say" | "say_eyes-closed" | "pressed" | "say_pressed";
 
 export const COW_STATUS: CowStatusDictionary = {
-  "idle": `
+  idle: `
 ^__^
 (oo)\\_______
 (__)\\       )\\/\\
     ||----w |
     ||     ||`,
-  "blink": `
+  blink: `
 ^__^
 (--)\\_______
 (__)\\       )\\/\\
     ||----w |
     ||     ||`,
-  "pressed": `
+  pressed: `
 ^__^
 (O<)\\_______
 (__)\\       )\\/\\
     ||----w |
     ||     ||`,
-  "say": (content) => {
+  say: (content) => {
     return cowsay.say({
       text: content,
-    })
+    });
   },
   "say_eyes-closed": (content) => {
     return cowsay.say({
       text: content,
       // @ts-expect-error The types in `cowsay` are broken
       eyes: "--",
-    })
+    });
   },
-  "say_pressed": (content) => {
+  say_pressed: (content) => {
     return cowsay.say({
       text: content,
       // @ts-expect-error The types in `cowsay` are broken
       eyes: "O<",
-    })
+    });
   },
-  "turning": `
+  turning: `
 ___/\\/\\___   
 \\        /
 /  POOF! \\
 \\__    __/
    \\  /
     \\|`,
-}
+};

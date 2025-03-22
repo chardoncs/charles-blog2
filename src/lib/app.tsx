@@ -1,7 +1,7 @@
-import { MainPane } from "../components/main-pane"
-import { Navbar } from "../components/navbar"
-import { StatusBar } from "../components/status-bar"
-import "@fontsource/fira-code"
+import { MainPane } from "../components/main-pane";
+import { Navbar } from "../components/navbar";
+import { StatusBar } from "../components/status-bar";
+import "@fontsource/fira-code";
 
 export function App() {
   return (
@@ -10,5 +10,5 @@ export function App() {
       <MainPane />
       <StatusBar />
     </div>
-  )
+  );
 }

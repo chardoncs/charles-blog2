@@ -1,4 +1,4 @@
-import { ComponentChildren } from "preact"
+import { ComponentChildren } from "preact";
 
 export const CANDIDATE_SENTENCES = [
   "Bun",
@@ -11,10 +11,10 @@ export const CANDIDATE_SENTENCES = [
   "All your codebase belong to us.",
   "oh caml my caml",
   "D",
-]
+];
 
 export const TURNING_DICT: { [key: string]: ComponentChildren | undefined } = {
-  "Bun": <img src="/images/bun.svg" alt="Bun" class="w-24 mr-6" />,
-  "Crablang": <img src="/images/ferris-knife.png" alt="Ferris knife" class="w-24 mr-6" />,
-  "D": <img src="/images/dman.png" alt="D Man" class="w-24 mr-6" />,
-}
+  Bun: <img src="/images/bun.svg" alt="Bun" class="w-24 mr-6" />,
+  Crablang: <img src="/images/ferris-knife.png" alt="Ferris knife" class="w-24 mr-6" />,
+  D: <img src="/images/dman.png" alt="D Man" class="w-24 mr-6" />,
+};
