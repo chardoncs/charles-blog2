@@ -4,7 +4,7 @@ import { getFileRoutes } from "./files";
 
 const server = serve({
   routes: {
-    "/": index,
+    "/*": index,
     ...(await getFileRoutes(
       { path: "robots.txt", mime: "text/plain" },
       { path: "images/og/thumbnail.png", mime: "image/png" },

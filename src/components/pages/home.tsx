@@ -35,7 +35,7 @@ function RandomWordsSection() {
   );
 }
 
-export function HomePane() {
+export default function Home() {
   return (
     <div class="w-full md:h-full flex flex-col md:flex-row gap-4">
       <MainSection />

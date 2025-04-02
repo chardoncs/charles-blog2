@@ -1,5 +1,4 @@
 import { Tab } from "./models/tab";
-import { HomePane } from "../components/panes/home-pane";
 import { signal } from "@preact/signals";
 
 export const $currentTab = signal<string>("");
@@ -12,15 +11,14 @@ export const TAB_ITEMS: Tab[] = [
   {
     id: "",
     name: "Home",
-    pane: <HomePane />,
   },
   {
     id: "cv",
     name: "CV",
-    noSwitch: true,
-    onClick() {
-      window.open("/files/cydong-cv_v3.pdf", "_blank");
-    },
+  },
+  {
+    id: "projects",
+    name: "Projects",
   },
   {
     id: "secrets",

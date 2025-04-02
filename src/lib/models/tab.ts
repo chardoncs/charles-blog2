@@ -4,6 +4,6 @@ export interface Tab {
   id: string;
   name: string;
   onClick?: () => void;
-  noSwitch?: boolean;
+  href?: string;
   pane?: ComponentChild;
 }

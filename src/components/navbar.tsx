@@ -32,17 +32,11 @@ export function Navbar() {
   return (
     <nav class="flex flex-col md:flex-row bg-zinc-800 shrink-0">
       <div class="flex flex-col md:flex-row md:grow">
-        {TAB_ITEMS.map(({ id, name, onClick, noSwitch }) => (
+        {TAB_ITEMS.map(({ id, name, onClick }) => (
           <NavbarItem
             active={currentTab === id}
             name={name}
-            onClick={() => {
-              if (!noSwitch) {
-                switchToTab(id);
-              }
-
-              onClick?.();
-            }}
+            onClick={onClick}
           />
         ))}
       </div>
