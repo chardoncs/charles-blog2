@@ -10,7 +10,6 @@ const server = serve({
       { path: "images/og/thumbnail.png", mime: "image/png" },
       { path: "images/cat-light-mode.gif", mime: "image/gif" },
       { path: "images/ferris-knife.png", mime: "image/png" },
-      { path: "images/icons/bluesky.svg", mime: "image/svg+xml" },
       { path: "images/icons/github.svg", mime: "image/svg+xml" },
       { path: "images/icons/codeberg.svg", mime: "image/svg+xml" },
       { path: "images/icons/x.svg", mime: "image/svg+xml" },
