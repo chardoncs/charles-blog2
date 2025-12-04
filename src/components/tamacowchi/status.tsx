@@ -1,5 +1,5 @@
 import { ComponentChildren } from "preact";
-import cowsay from "cowsay";
+import * as cowsay from "cowsay";
 
 export type CowStatusDictionary = {
   [key: string]: string | ((content?: string) => string | ComponentChildren);
@@ -28,19 +28,19 @@ export const COW_STATUS: CowStatusDictionary = {
     ||     ||`,
   say: (content) => {
     return cowsay.say({
-      text: content,
+      text: content ?? "",
     });
   },
   "say_eyes-closed": (content) => {
     return cowsay.say({
-      text: content,
+      text: content ?? "",
       // @ts-expect-error The types in `cowsay` are broken
       eyes: "--",
     });
   },
   say_pressed: (content) => {
     return cowsay.say({
-      text: content,
+      text: content ?? "",
       // @ts-expect-error The types in `cowsay` are broken
       eyes: "O<",
     });
